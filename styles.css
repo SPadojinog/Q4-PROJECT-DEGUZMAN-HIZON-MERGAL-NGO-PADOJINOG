@@ -1,0 +1,101 @@
+body {
+    font-family: "Sour Gummy", serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100;
+    background-image: url(https://i.pinimg.com/736x/4f/60/e0/4f60e061c8b2a59c2df4cc6ec74579c2.jpg);
+}
+
+.logo {
+    width: 40px; 
+    height: auto;
+    align-items:left;
+}
+
+.centered-heading {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.navbar {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    background-color: black;
+    padding: 10px;
+    margin: 0;
+}
+
+.navbar a {
+    color: white !important; 
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    color: #ff4d4d;
+}
+
+footer {
+    background-color: black;
+    padding: 25px;
+    text-align: center;
+    color: white;
+}
+
+.shadow-box {
+    width: 70%;
+    height: 30%;
+    background-color: #f0f0f0; 
+    margin: 10px auto; 
+    padding: 15px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); 
+    border-radius: 10px; 
+}
+
+.member-box {
+    width: 200px;
+    background-color: #f0f0f0; 
+    padding: 10px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); 
+    border-radius: 10px; 
+    text-align: center;
+    font-family: "Sour Gummy", serif;
+    font-style: normal;
+}
+
+.member-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    gap: 20px;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+a {
+    text-align:left;
+}
+
+.Profile-title {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+.dropdown-menu .dropdown-item {
+  color: white;              
+  background-color: black;    
+}
+
+.dropdown-menu .dropdown-item:hover,
+.dropdown-menu .dropdown-item:focus {
+  background-color: gray;   
+  color: black;                
+}
