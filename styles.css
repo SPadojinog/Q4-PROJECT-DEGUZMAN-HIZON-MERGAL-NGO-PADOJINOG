@@ -118,3 +118,11 @@ p {
     height: auto;
       border-radius: 10px;
 }
+
+h2 {
+    text-align: center;
+}
+
+REFERENCES.p {
+    text-align: left;
+}
