@@ -1,45 +1,50 @@
-  function rateMembers() {
-    var name = document.getElementById("name").value;
-    var email = document.getElementById("email").value;
+function rateMembers() {
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const ngo = document.getElementById("ngo").value;
+    const mergal = document.getElementById("mergal").value;
+    const padojinog = document.getElementById("padojinog").value;
+    const deguzman = document.getElementById("deguzman").value;
+    const hizon = document.getElementById("hizon").value;
 
-    if (name === "" || email === "") {
-      alert("Please fill in your name and email.");
+    if (!name || !email || !ngo || !mergal || !padojinog || !deguzman || !hizon) {
+      alert("Please fill in all the fields before submitting.");
       return;
     }
 
-    var members = ["ngo", "mergal", "padojinog", "deguzman", "hizon"];
-    var allValid = true; 
-
-    for (var i = 0; i < members.length; i++) {
-      var id = members[i];
-      var input = document.getElementById(id);
-      var value = parseInt(input.value);
-      var output = document.getElementById(id + "-output");
-
-      if (isNaN(value) || value < 1 || value > 10) {
-        output.innerHTML = "<span class='text-danger'>Please enter a value from 1 to 10.</span>";
-        allValid = false;
-      } 
-      else {
-        output.innerHTML = "<strong>" + getRating(value) + "</strong>";
+    const scores = [ngo, mergal, padojinog, deguzman, hizon].map(Number);
+    for (let score of scores) {
+      if (isNaN(score) || score < 1 || score > 10) {
+        alert("Please enter ratings from 1 to 10 only.");
+        return;
       }
     }
 
-    if (allValid) {
-      alert("Thank you " + name + " for submitting your ratings!");
-    }
+    let output = "";
+    output += "NGO: " + ngo + " - " + getRating(Number(ngo)) + "<br>";
+    output += "MERGAL: " + mergal + " - " + getRating(Number(mergal)) + "<br>";
+    output += "PADOJINOG: " + padojinog + " - " + getRating(Number(padojinog)) + "<br>";
+    output += "DE GUZMAN: " + deguzman + " - " + getRating(Number(deguzman)) + "<br>";
+    output += "HIZON: " + hizon + " - " + getRating(Number(hizon)) + "<br>";
+
+    document.getElementById("output").innerHTML = output;
+
+    alert("Thank you, " + name + ", for submitting your ratings!");
   }
 
   function getRating(score) {
-    if (score >= 9) {
-      return "Excellent";
-    } else if (score >= 7) {
-      return "Good";
-    } else if (score >= 5) {
-      return "Satisfactory";
-    } else if (score >= 3) {
-      return "Needs Improvement";
-    } else {
-      return "Poor";
-    }
+    switch (true) {
+      case (score >= 9 && score <= 10):
+        return "Excellent";
+      case (score >= 7 && score <= 8):
+        return "Good";
+      case (score >= 5 && score <= 6):
+        return "Satisfactory";
+      case (score >= 3 && score <= 4):
+        return "Needs Improvement";
+      case (score >= 1 && score <= 2):
+        return "Poor";
+      default:
+        return "Invalid";
   }
+}
