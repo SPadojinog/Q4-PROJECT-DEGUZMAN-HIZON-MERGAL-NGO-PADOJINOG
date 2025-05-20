@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rate Us - Member Projects</title>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
@@ -12,103 +16,98 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barriecito&family=Chango&family=Chewy&family=DynaPuff:wght@400..700&family=Kaushan+Script&family=Kirang+Haerang&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Permanent+Marker&family=Rubik+Wet+Paint&family=Sofadi+One&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" type="text/css" href="styles.css"> 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>PROJECT</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
 </head>
 <body>
-    <!-- NAVIGATION BAR: MERGAL -->
-    <nav class="navbar navbar-expand-sm">
+      <!-- NAVIGATION BAR -->
+      <nav class="navbar navbar-expand-sm">
         <div class="container-fluid">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcHVuqgJPs1mFipnjsVwsFIYiYwTaulS-1_w&s" alt="Logo" class="logo rounded-circle" width="45px" length="45px">
-            <ul class="navbar-nav d-flex justify-content-center mx-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Projects </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="page2.html">1st Quarter</a></li>
-                      <li><a class="dropdown-item" href="page3.html">2nd Quarter</a></li>
-                      <li><a class="dropdown-item" href="page4.html">3rd Quarter</a></li>
-                      <li><a class="dropdown-item" href="page5.html">4th Quarter</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="page6.html">What's Next?</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="page7.html">Rate Us</a>
-                </li>
-            </ul>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcHVuqgJPs1mFipnjsVwsFIYiYwTaulS-1_w&s" alt="Logo" class="logo rounded-circle" width="45px" length="45px">
+          <ul class="navbar-nav d-flex justify-content-center mx-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Projects </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="page2.html">1st Quarter</a></li>
+                <li><a class="dropdown-item" href="page3.html">2nd Quarter</a></li>
+                <li><a class="dropdown-item" href="page4.html">3rd Quarter</a></li>
+                <li><a class="dropdown-item" href="page5.html">4th Quarter</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="page6.html">What's Next?</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="page7.html">Rate Us</a>
+            </li>
+          </ul>
         </div>
-    </nav>
+      </nav>
 
-    <!-- RATE US: NGO -->
-    <div class="shadow-box rounded bg-light shadow-sm">
-        <h2 class="text-center mb-4"><strong>Rate Each Member's Project (1–10)</strong></h2>
+      <div class="shadow-box">
+        <h1><strong>Rate Each Member's Project (1–10)</strong></h1>
+
         <form>
-            <div class="row g-3">
-                <div class="col-md-6">
-                    <label for="name" class="form-label"><b>Name:</b></label>
-                    <input type="text" id="name" class="form-control" placeholder="Your name" required />
-                </div>
-                <div class="col-md-6">
-                    <label for="email" class="form-label"><strong>Email:</strong></label>
-                    <input type="email" id="email" class="form-control" placeholder="you@example.com" required />
-                </div>
-
-                <div class="member-box col-md-6">
-                    <img src="pfpseth.jpg" length="225" width="180" alt="Adobo"><br>
-                    <a><b>NGO</b></a> <br />
-                    <input type="number" id="ngo" min="1" max="10" class="form-control" required />
-                    <div id="ngo-output" class="text-success mt-1 fw-bold"></div>
-                </div>
-
-                <div class="member-box col-md-6">
-                    <img src="IMG_1470.jpg" length="225" width="180" alt="Adobo"><br>
-                    <a><b>MERGAL</b></a> <br />
-                    <input type="number" id="mergal" min="1" max="10" class="form-control" required />
-                    <div id="mergal-output" class="text-success mt-1 fw-bold"></div>
-                </div>
-
-                <div class="member-box col-md-6">
-                    <img src="sofy.jpg" length="225" width="180" alt="Adobo"><br>
-                    <a><b>PADOJINOG</b></a> <br />
-                    <input type="number" id="padojinog" min="1" max="10" class="form-control" required />
-                    <div id="padojinog-output" class="text-success mt-1 fw-bold"></div>
-                </div>
-
-                <div class="member-box col-md-6">
-                    <img src="v2.jpg" length="225" width="180" alt="Adobo"><br>
-                    <a><b>DE GUZMAN</b></a> <br />
-                    <input type="number" id="deguzman" min="1" max="10" class="form-control" required />
-                    <div id="deguzman-output" class="text-success mt-1 fw-bold"></div>
-                </div>
-                    
-                <div class="member-box col-md-6">
-                    <img src="https://i.pinimg.com/736x/2d/bf/6a/2dbf6ab420e7e400b72c142d3fcbfb02.jpg" length="225" width="180" alt="Adobo"><br>
-                    <a><b>HIZON</b></a> <br />
-                    <input type="number" id="hizon" min="1" max="10" class="form-control" required />
-                    <div id="hizon-output" class="text-success mt-1 fw-bold"></div>
-                </div>
-
-                <div class="col-12">
-                    <label for="comments" class="form-label">Comments:</label>
-                    <textarea id="comments" class="form-control" rows="4" placeholder="Write your comments here..."></textarea>
-                </div>
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label for="name" class="form-label">Name:</label>
+              <input type="text" id="name" class="form-control" placeholder="Your Name" required />
+            </div>
+            <div class="col-md-6">
+              <label for="email" class="form-label">Email:</label>
+              <input type="email" id="email" class="form-control" placeholder="you@example.com" required />
             </div>
 
-                <div class="d-flex justify-content-between gap-3 mt-4">
-        <button type="button" class="btn btn-dark flex-fill" onclick="rateMembers()">Submit Ratings</button>
-        <button type="button" class="btn btn-secondary flex-fill" onclick="refreshForm()">Refresh</button>
-    </div>
-        </form>
-    </div>
+            <div class="member-container">
+              <div class="member-box">
+                <img src="https://i.pinimg.com/736x/2d/bf/6a/2dbf6ab420e7e400b72c142d3fcbfb02.jpg" alt="Vito De Guzman"><br>
+                <a><b>VITO DE GUZMAN</b></a> <br />
+                <input type="number" id="deguzman" min="1" max="10" class="form-control" required />
+              </div>
 
-    <!-- FOOTER: HIZON -->
-    <footer class="text-light text-center py-3 mt-5">
+              <div class="member-box">
+                <img src="IMG_1470.jpg" alt="Manuel Mergal"><br>
+                <a><b>MANUEL MERGAL</b></a> <br />
+                <input type="number" id="mergal" min="1" max="10" class="form-control" required />
+              </div>
+
+              <div class="member-box">
+                <img src="SOFY.jpg" alt="Sofia Padojinog"><br>
+                <a><b>SOFIA PADOJINOG</b></a> <br />
+                <input type="number" id="padojinog" min="1" max="10" class="form-control" required />
+              </div>
+
+              <div class="member-box">
+                <img src="pfpseth.jpg" alt="Seth Ngo"><br>
+                <a><b>SETH NGO</b></a> <br />
+                <input type="number" id="ngo" min="1" max="10" class="form-control" required />
+              </div>
+
+              <div class="member-box">
+                <img src="EA Profile.jpg" alt="Eduardo Hizon"><br>
+                <a><b>EDUARDO HIZON</b></a> <br />
+                <input type="number" id="hizon" min="1" max="10" class="form-control" required />
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="comments" class="form-label">Comments:</label>
+              <textarea id="comments" class="form-control" rows="4" placeholder="Write your comments here..."></textarea>
+            </div>
+          </div>
+
+          <div class="mt-4 text-center fs-5 fw-bold" id="output"></div>
+
+            <div class="d-flex justify-content-between gap-3 mt-4">
+                <button type="button" class="btn btn-dark flex-fill" onclick="rateMembers()">Submit Ratings</button>
+                <button type="button" class="btn btn-secondary flex-fill" onclick="refreshForm()">Refresh</button>
+            </div>
+        </form>
+      </div>
+
+    <footer>
     OBMC GH | DE GUZMAN, HIZON, MERGAL, NGO, PADOJINOG
     </footer>
 
